@@ -1,0 +1,5 @@
+# Let the logged-in seat user talk HID++ to a Logitech K380 over Bluetooth,
+# so the omarchy-k380-fnlock bar widget can switch Fn lock without root.
+# Must sort before 73-seat-late.rules, which turns the uaccess tag into an ACL.
+
+SUBSYSTEM=="hidraw", KERNELS=="0005:046D:B342.*", TAG+="uaccess"
